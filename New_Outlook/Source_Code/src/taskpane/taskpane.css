@@ -1,0 +1,119 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling issues in task pane */
+}
+
+.ms-welcome__header {
+    padding: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.ms-welcome__content {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.ms-welcome__main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ms-welcome__footer {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+#show-hidden-btn,
+#run-ai-check-btn {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+#result-display,
+#ai-result-display {
+    background-color: #f3f2f1;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    max-height: none; /* Allow full height in task pane */
+    overflow-y: auto;
+}
+
+#result-display h3,
+#ai-result-display h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333333;
+}
+
+#result-display ul,
+#ai-result-display ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#result-display li,
+#ai-result-display li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+#result-display li:last-child,
+#ai-result-display li:last-child {
+    border-bottom: none;
+}
+
+#result-display li .ms-Icon,
+#ai-result-display li .ms-Icon {
+    margin-right: 8px;
+    color: #0078d4;
+}
+
+#result-display a,
+#ai-result-display a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+#result-display a:hover,
+#ai-result-display a:hover {
+    text-decoration: underline;
+}
+
+.ms-Spinner {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.ms-Spinner-circle {
+    border-color: #0078d4;
+}
+
+/* Pivot styles for tabs */
+.ms-Pivot {
+    margin-bottom: 16px;
+}
+
+.ms-Pivot-link {
+    cursor: pointer;
+}
+
+.ms-Pivot-content:not([style*="display: none"]) {
+    display: block !important;
+}

@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\MailGuardVSTO]
+"Description"="MailGuard Email Security Checker"
+"FriendlyName"="MailGuard"
+"LoadBehavior"=dword:00000003
+"Manifest"="file:///C:/Users/Admin/Documents/GitHub/MailGuard/MailGuardVSTO/MailGuardVSTO/bin/Release/MailGuardVSTO.vsto|vstolocal"

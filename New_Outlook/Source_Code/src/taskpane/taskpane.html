@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title>Email Inspector</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+  <!-- For more information on Fluent UI, visit https://developer.microsoft.com/en-us/fluentui -->
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css" />
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
+
+  <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome">
+  <div id="sideload-msg" class="ms-welcome__header ms-bgColor-neutralLighter">
+    <h2 class="ms-font-xxl">Please sideload your add-in to see app body.</h2>
+  </div>
+  <div id="app-body" class="ms-welcome__main" style="display: none;">
+    <header class="ms-welcome__header ms-bgColor-themePrimary">
+      <h1 class="ms-font-su ms-fontColor-white">IAP491_G14</h1>
+      <p class="ms-font-m ms-fontColor-whiteAlt">Demo</p>
+    </header>
+    <section class="ms-welcome__content">
+      <div class="ms-Pivot">
+        <ul class="ms-Pivot-links">
+          <li class="ms-Pivot-link is-selected" data-content="hidden-files">Hiển thị liên kết ẩn</li>
+          <li class="ms-Pivot-link" data-content="ai-phishing">Kiểm tra liên kết ẩn</li>
+        </ul>
+        <div class="ms-Pivot-content" data-content="hidden-files">
+          <button id="show-hidden-btn" class="ms-Button ms-Button--primary">
+            <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--View"></i></span>
+            <span class="ms-Button-label">View Hidden Files & Links</span>
+          </button>
+          <div id="result-display" style="display: none;">
+            <div id="loading-indicator" class="ms-Spinner ms-Spinner--large" style="display: none;">
+              <div class="ms-Spinner-circle"></div>
+              <p class="ms-font-m">Loading...</p>
+            </div>
+            <div id="results-content"></div>
+          </div>
+        </div>
+        <div class="ms-Pivot-content" data-content="ai-phishing" style="display: none;">
+          <button id="run-ai-check-btn" class="ms-Button ms-Button--primary">
+            <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--Robot"></i></span>
+            <span class="ms-Button-label">Run AI Phishing Check</span>
+          </button>
+          <div id="ai-result-display" style="display: none;">
+            <div id="ai-loading-indicator" class="ms-Spinner ms-Spinner--large" style="display: none;">
+              <div class="ms-Spinner-circle"></div>
+              <p class="ms-font-m">Analyzing with AI...</p>
+            </div>
+            <div id="ai-results-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="ms-welcome__footer ms-bgColor-neutralLighter">
+      <p class="ms-font-s">IAP491_G14_Demo</p>
+    </footer>
+  </div>
+  <script type="text/javascript" src="domain.js"></script> 
+  <script type="text/javascript" src="rf_model.js"></script> 
+  <script type="text/javascript" src="taskpane.js"></script>
+</body>
+</html>s
